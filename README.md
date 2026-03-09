@@ -11,10 +11,3 @@ Currently, two official plugins are available:
 
 The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
-
-])
-```
-# React_G
-# Carrusel_G
-# Carrusel_G
-# Carrusel_G
