@@ -1,12 +1,19 @@
-# React + TypeScript + Vite
+## CI/CD Pipeline (Integración y Despliegue Continuo)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto utiliza **GitHub Actions** para garantizar la calidad del código antes de cada despliegue, y **Vercel** para el despliegue automático.
 
-Currently, two official plugins are available:
+### Flujo de Integración Continua (CI)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El archivo de configuración automatiza los siguientes pasos de control de calidad:
 
-## React Compiler
+1. **Instalación limpia de dependencias:** Se utiliza `npm ci` para garantizar una instalación estricta basada en el `package-lock.json`.
+2. **Ejecución de Linter (ESLint):** Análisis estático del código fuente para detectar errores de sintaxis y mantener buenas prácticas.
+3. **Prueba de Build:** Construcción del proyecto para producción, garantizando que el código compila sin errores críticos.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+#### Estructura del Workflow (`ci.yml`)
+
+- `on: push`: Dispara el workflow automáticamente cada vez que se detectan cambios en la rama `main`.
+- `jobs`: Define el entorno de ejecución (Ubuntu).
+- `steps`: Acciones secuenciales:
+  - `actions/checkout@v4`: Clona el código fuente en el servidor virtual.
+  - `actions/setup-node@v4`: Prepara el entorno instalando Node.js (v20).

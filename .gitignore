@@ -25,3 +25,5 @@ dist-ssr
 *.sw?
 .env
 docs
+guia-estructura-proyectos.md
+node_modules
