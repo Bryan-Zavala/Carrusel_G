@@ -26,3 +26,4 @@ dist-ssr
 docs
 guia-estructura-proyectos.md
 node_modules
+JEST_SETUP_GUIDE.md
