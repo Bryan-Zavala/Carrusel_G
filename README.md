@@ -17,3 +17,4 @@ El archivo de configuración automatiza los siguientes pasos de control de calid
 - `steps`: Acciones secuenciales:
   - `actions/checkout@v4`: Clona el código fuente en el servidor virtual.
   - `actions/setup-node@v4`: Prepara el entorno instalando Node.js (v20).
+-
