@@ -1,0 +1,17 @@
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #e2e8f0;
+  background-color: #0f172a;
+  min-width: 32rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

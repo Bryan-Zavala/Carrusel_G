@@ -1,0 +1,26 @@
+.container {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container::before {
+  position: absolute;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.loading {
+  position: relative;
+  z-index: 3;
+  color: white;
+  font-size: 1.5rem;
+}

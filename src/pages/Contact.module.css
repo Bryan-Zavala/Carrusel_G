@@ -1,0 +1,122 @@
+.page {
+  width: min(100rem, 100%);
+  margin: 0 auto;
+  padding: 1.6rem 1.2rem 3rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  color: #f1f5f9;
+}
+
+.header p {
+  margin: 0.8rem auto 0;
+  max-width: 62rem;
+  color: #94a3b8;
+  font-size: 1.5rem;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.form,
+.card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 1.2rem;
+  padding: 1.6rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.form h2,
+.card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.9rem;
+  color: #e2e8f0;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.field label {
+  font-size: 1.4rem;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid #334155;
+  border-radius: 0.8rem;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 0.85rem 1rem;
+  font-size: 1.5rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #94a3b8;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 11rem;
+}
+
+.button {
+  margin-top: 0.4rem;
+  border: 1px solid #94a3b8;
+  border-radius: 0.8rem;
+  background: #334155;
+  color: #f1f5f9;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.9rem 1.2rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button:hover {
+  background: #1e293b;
+  border-color: #cbd5e1;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #cbd5e1;
+}
+
+.card strong {
+  color: #e2e8f0;
+}
+
+@media (max-width: 72rem) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}

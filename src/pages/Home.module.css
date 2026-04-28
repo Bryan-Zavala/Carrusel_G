@@ -1,0 +1,102 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.5rem 1.2rem 3rem;
+}
+
+.carruselWrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.infoSection {
+  width: min(96rem, 100%);
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2.2rem, 2.5vw, 3rem);
+  color: #f1f5f9;
+}
+
+.description {
+  margin: 1rem auto 1.8rem;
+  max-width: 62rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #94a3b8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.2rem;
+}
+
+.card,
+.highlightCard {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 1.2rem;
+}
+
+.card {
+  padding: 1.4rem;
+  text-align: left;
+}
+
+.card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.7rem;
+  color: #f1f5f9;
+}
+
+.card p,
+.highlightCard p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.card p {
+  font-size: 1.4rem;
+  line-height: 1.45;
+}
+
+.highlightGrid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.highlightCard {
+  padding: 1.2rem;
+}
+
+.highlightCard h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.9rem;
+  color: #f1f5f9;
+}
+
+.highlightCard p {
+  font-size: 1.35rem;
+}
+
+@media (max-width: 56rem) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .highlightGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+}
